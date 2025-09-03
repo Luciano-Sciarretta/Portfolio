@@ -5,59 +5,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
 
 
-<body  class="roboto">
+<body class="roboto">
   <div class="container">
 
     <aside class="sidebar">
-      <section class="sidebar__content" >
+      <section class="sidebar__content">
         <h1 class="sidebar__header   montserrat-bold">Luciano Sciarretta</h1>
         <h2 class="sidebar__subtitle   montserrat-medium">Desarrollador Back End</h2>
-        <p class="sidebar__description" >Construyo experiencias digitales y soluciones web.</p>
+        <p class="sidebar__description">Construyo experiencias digitales y soluciones web.</p>
       </section>
       <nav class="sidebar__nav">
         <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="sidebar__link">Sobre mí</a></li>
-          <li class="sidebar__item"><a class="sidebar__link">Proyectos</a></li>
-          <li class="sidebar__item"><a class="sidebar__link">Contacto</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#about">Sobre mí</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#projects">Proyectos</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#contact-me">Contacto</a></li>
         </ul>
       </nav>
     </aside>
 
 
-    <main class="main">
-      <section class="about">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        </p>
-      </section>
+    <main class="main" id="about">
+      <section class="about" id="about">
+        <h3 class="about-title">Sobre Mí</h3>
+        <div class="about-text">
+          <p>
+            Durante más de <strong>20 años</strong> trabajé como <strong>músico profesional</strong>, viajando y
+            colaborando con artistas de todo el mundo como bandoneonista.<br><br>
+            Esta experiencia me enseñó <strong>disciplina</strong>, <strong>creatividad</strong> y <strong>trabajo en
+              equipo</strong>, habilidades que hoy aplico en el desarrollo web.
+          </p>
 
-      <section class="projects">
-        <h2 class="projects__title" >Projects</h2>
-        <div class="projects__grid">
-          <div class="projects__card">Proyecto 1</div>
-          <div class="projects__card">Proyecto 2</div>
-          <div class="projects__card">Proyecto 3</div>
+          <p>
+            Actualmente me dedico a la programación, especializándome en <strong>Python</strong> y
+            <strong>Django</strong>, construyendo proyectos como <strong>ecommerce</strong> y <strong>aplicaciones web
+              completas</strong>.<br><br>
+            Busco oportunidades para crecer como <strong>desarrollador backend</strong> y aportar soluciones
+            <strong>eficientes y bien diseñadas</strong>, combinando mi pasión por la tecnología con mi experiencia
+            profesional previa.
+          </p>
+
+          <p>
+            Me interesa <strong>aprender constantemente</strong> nuevas tecnologías, enfrentar <strong>desafíos
+              complejos</strong> y entregar soluciones que sean tanto <strong>funcionales</strong> como
+            <strong>elegantes</strong>.<br><br>
+            Disfruto trabajar en proyectos que integren <strong>lógica, diseño y experiencia de usuario</strong>,
+            aportando siempre un enfoque <strong>analítico</strong> y orientado a <strong>resultados</strong>.<br><br>
+            Mi objetivo es desarrollar aplicaciones que no solo funcionen bien, sino que también brinden una
+            <strong>experiencia intuitiva y de calidad</strong> al usuario.
+          </p>
         </div>
       </section>
+
+
+
+
+      <section class="projects" id="projects">
+        <h3 class="projects-title">Proyectos</h3>
+        <div class="project-card">
+          <img class="project-card__img" src="img/portfolio/Zaraustra/Zaratustra.png.png" alt="">
+          <div class="project-card__description">
+            <h3 class="project-title">Zaratustra</h3>
+            <p class="project-desc">
+              Plataforma de venta online con carrito de compras, gestión de usuarios y panel de administración.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span class="project-card__tech-item">Python</span>
+            <span class="project-card__tech-item">Django</span>
+            <span class="project-card__tech-item">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-card__img" src="img/portfolio/DevSpace/DevSpace.png" alt="">
+          <div class="project-card__description">
+            <h3 class="project-title">DevSpace</h3>
+            <p class="project-desc">
+              Plataforma de venta online con carrito de compras, gestión de usuarios y panel de administración.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span class="project-card__tech-item">Python</span>
+            <span class="project-card__tech-item">Django</span>
+            <span class="project-card__tech-item">Bootstrap</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="contact" id="contact-me">
+        <h3 class="contact-title">Contacto</h3>
+        <form action="">
+
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Asunto:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <input type="submit" value="Enviar">
+
+        </form>
+      </section>
+
+
+
     </main>
   </div>
+
+  <footer class="footer">
+    <p class="footer-name">© 2025 Luciano Sciarretta</p>
+    <p class="footer__links">
+      <a href="mailto:tuemail@ejemplo.com"><svg class="icon" viewBox="0 0 24 24" width="30" height="30"
+          fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.805 1.305 3.49.998.108-.775.418-1.305.76-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.403c1.02.005 2.045.138 3.003.403 2.29-1.552 3.297-1.23 3.297-1.23.653 1.65.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.62-5.48 5.922.43.37.813 1.102.813 2.222 0 1.605-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+        </svg></a>
+
+      <a href="https://www.linkedin.com/in/tu-perfil" target="_blank"><svg class="icon" viewBox="0 0 24 24" width="30"
+          height="30" fill="currentColor">
+          <path d="M12 13.065l-11.992-7.065v14.002h23.984V6l-11.992 7.065zM12 0L0 7.065l12 7.065 12-7.065L12 0z" />
+        </svg></a>
+      <a href="https://github.com/tu-usuario" target="_blank"><svg class="icon" viewBox="0 0 24 24" width="30"
+          height="30" fill="currentColor">
+          <path
+            d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.54a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.56v-5.57c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67h-3.56V9h3.42v1.56h.05c.48-.9 1.66-1.85 3.41-1.85 3.64 0 4.31 2.4 4.31 5.52v6.28z" />
+        </svg></a>
+    </p>
+  </footer>
+
   <script src="main.js"></script>
 </body>
 

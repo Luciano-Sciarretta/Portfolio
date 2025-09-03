@@ -1,137 +1,258 @@
+@import url("utils.css");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --color-bg: #1e1e2f;
-    --color-bg-secondary: #2e2c3e;
-    --color-text: #e0e0e0;
-    --color-text-secondary: #a0a0b0;
-    --color-accent: #ff6b6b;
-    --color-link: #f5c518;
-}
-
-/*-------------------   FONT   -------------------*/
-
-.montserrat-bold {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.montserrat-medium {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-.roboto {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
-
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
+    
 }
 
 
 /*-----------------------------   CONTAINER   ---------------------------*/
-
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 3fr 0.8fr;
     margin-top: 6rem;
 }
 
 
 /*---------------------   SIDEBAR   ---------------------------------------*/
 .sidebar {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 12rem;
-    margin: 0;
+    grid-column: 2 / 3;
+    position: fixed;
+    left: calc(0.8 / 7.6 * 100%);
+    width: calc(2 / 7.6 * 100%);
 }
 
 .sidebar__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+}
+
+p {
+    font-family: "Roboto", serif;
+    line-height: 27px;
+    color: var(--color-text-secondary);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat";
 }
 
 .sidebar__header {
-    font-size: 2.5rem;
-    margin: 0 0 1rem 0;
+    font-family: "Montserrat", serif;
+    font-size: 2.7rem;
+    font-weight: 800;
 }
 
 .sidebar__subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-top: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1.4rem;
 }
 
-.sidebar__description {
-    color: var(--color-text-secondary);
-    margin-bottom: 6rem;
-}
 
 .sidebar__nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 7rem;
 }
 
-.sidebar__list {
+.sidebar__nav ul {
     list-style: none;
 }
 
-.sidebar__item {
-    margin-top: 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease, scale 0.2s ease;
+.sidebar__link {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+}
+
+.sidebar__nav ul li {
+    margin-bottom: 1.4rem;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    transition: transform 0.2s ease;
+    cursor: pointer;
 
     &:hover {
-        color: var(--color-accent);
-        cursor: pointer;
-        transform: translateX(25px) scale(1.2);
-
+        font-weight: 700;
+        color: var(--color-accent-hover);
+        transform: translateX(12px);
+        text-decoration: underline;
+    .sidebar__link {
+        color:var(--color-accent-hover) ;
+    }
     }
 }
 
+
+
 /*---------------------   CONTENT   ---------------------------------------*/
+
 .main {
-    flex: 4;
+    grid-column: 4 / 5;
+    font-family: "Montserrat", serif;
+    height: auto;
+}
+
+
+.projects {
+    margin-top: 7rem;
+    font-family: "Montserrat", serif;
+}
+
+.projects-title, .contact-title, .about-title {
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.project-card {
+    margin-bottom: 2.9rem;
+    padding: 1rem;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+    .project-title {
+        transition: color 0.3s ease; 
+    }
+
+    &:hover {
+        background-color: var(--color-card-hover);
+        box-shadow: 0 4px 12px rgba(79, 193, 255, 0.2);
+
+        .project-title {
+            color: var(--color-accent-hover);
+        }
+    }
+}
+
+.project-card__img {
+  width: 135px;
+  height: 83px;
+  object-fit: cover; 
+  border-radius: 6px;
+}
+
+
+.project-title,
+.project-desc,
+.project-tech {
+    grid-column: 2;
+}
+
+
+
+
+/*---------------------   CONTACT FORM   -----------------------*/
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", serif;
+  
+}
+
+.contact label {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px var(--color-accent);
+    font-family: "Montserrat", serif;
+}
+
+.contact input[type="submit"] {
+    background-color: var(--color-card-hover);
+    color: var(--color-text-secondary);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, transform 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+
+.contact input[type="submit"]:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    color: var(--color-bg-secondary);
+}
+
+
+
+/*------------------------FOOTER------------------*/
+.footer {
+    background-color: var(--color-card-hover);
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 2rem 12rem 0 0;
-    margin: 0;
+    justify-content: center;
+    
 }
 
+.footer-name{
+    font-family: "Montserrat";
+}
 
+.footer__links  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
 
-
-
-
+.footer__links a {
+    text-decoration: none;
+    color: var(--color-accent-hover);
+    margin-top: 1.5rem;
+    transition: color 0.3s ease;
+    &:hover {
+        color: var(--color-accent);
+    }
+}
 
 /*-------------------media queries ------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 6rem;
+        gap: 2rem;
+        padding: 2rem;
     }
 
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 0.7fr 3fr 3fr 0.7fr;
+    }
+
+    .sidebar {
+        grid-column: 2 / 3;
+        position: static;
+        min-width: 22rem;
+    }
+
+    .main {
+        grid-column: 3 / 4;
+    }
 }
