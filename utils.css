@@ -14,9 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
-#about {
-  scroll-margin-top: 6rem; /* mismo valor que el margin-top de .container */
+#about, #projects, #contact-me {
+  scroll-margin-top: 5rem; 
 }
+
 
 .project-card__tech-item{
     background-color: rgba(79, 193, 255, 0.15);
