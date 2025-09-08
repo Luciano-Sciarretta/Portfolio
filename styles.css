@@ -10,7 +10,7 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    
+
 }
 
 
@@ -68,31 +68,36 @@ h3 {
     list-style: none;
 }
 
-.sidebar__link {
-    text-decoration: none;
+
+
+.sidebar__item {
+    margin-bottom: 1.4rem;
     color: var(--color-text-secondary);
-    font-weight: 600;
 }
 
-.sidebar__nav ul li {
-    margin-bottom: 1.4rem;
+.sidebar__link {
     font-family: "Montserrat", serif;
-    font-weight: 400;
-    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
     transition: transform 0.2s ease;
     cursor: pointer;
+    color: var(--color-text-secondary);
+    display: inline-block;
 
     &:hover {
-        font-weight: 700;
+        font-weight: 800;
         color: var(--color-accent-hover);
         transform: translateX(12px);
         text-decoration: underline;
-    .sidebar__link {
-        color:var(--color-accent-hover) ;
-    }
     }
 }
 
+.sidebar__link.active {
+    font-weight: 800;
+    color: var(--color-accent-hover);
+    transform: translateX(12px);
+    text-decoration: underline;
+}
 
 /*-----------------------------------ABOUT------------------------*/
 
@@ -103,7 +108,7 @@ h3 {
     flex-wrap: wrap;
 }
 
-.about-photo{
+.about-photo {
     float: left;
     margin-right: 1rem;
     width: 270px;
@@ -116,6 +121,7 @@ h3 {
     flex: 1;
     min-width: 200px;
 }
+
 /*---------------------   CONTENT   ---------------------------------------*/
 
 .main {
@@ -125,12 +131,14 @@ h3 {
 }
 
 
-.projects {
+.main-projects {
     margin-top: 7rem;
     font-family: "Montserrat", serif;
 }
 
-.projects-title, .contact-title, .about-title {
+.projects-title,
+.contact-title,
+.about-title {
     margin-bottom: 3rem;
     letter-spacing: 3px;
 }
@@ -145,7 +153,7 @@ h3 {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
     .project-title {
-        transition: color 0.3s ease; 
+        transition: color 0.3s ease;
     }
 
     &:hover {
@@ -159,10 +167,10 @@ h3 {
 }
 
 .project-card__img {
-  width: 135px;
-  height: 83px;
-  object-fit: cover; 
-  border-radius: 6px;
+    width: 135px;
+    height: 83px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 
@@ -176,30 +184,30 @@ h3 {
 
 
 /*---------------------   CONTACT FORM   -----------------------*/
-.contact form {
+.main-contact form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     gap: 1.5rem;
     margin-bottom: 2rem;
     font-family: "Montserrat", serif;
-  
+
 }
 
-.contact label {
+.main-contact label {
     font-weight: 500;
     color: var(--color-text-secondary);
 }
 
-.contact input:focus,
-.contact textarea:focus {
+.main-contact input:focus,
+.main-contact textarea:focus {
     outline: none;
     border-color: var(--color-accent);
     box-shadow: 0 0 5px var(--color-accent);
     font-family: "Montserrat", serif;
 }
 
-.contact input[type="submit"] {
+.main-contact input[type="submit"] {
     background-color: var(--color-card-hover);
     color: var(--color-text-secondary);
     font-weight: 700;
@@ -211,7 +219,7 @@ h3 {
 }
 
 
-.contact input[type="submit"]:hover {
+.main-contact input[type="submit"]:hover {
     background-color: var(--color-accent-hover);
     transform: translateY(-2px);
     color: var(--color-bg-secondary);
@@ -223,7 +231,7 @@ h3 {
     align-items: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,  -50%);
+    transform: translate(-50%, -50%);
     width: 250px;
     height: 150px;
     border-radius: 5px;
@@ -239,19 +247,19 @@ h3 {
 }
 
 .form-status.sending {
-  background-color: rgba(164, 212, 239, 0.9); 
-  color: var(--color-bg);
+    background-color: rgba(164, 212, 239, 0.9);
+    color: var(--color-bg);
 }
 
 .form-status.success {
-  background-color: rgba(46, 204, 113, 0.9); 
-  color: var(--color-text);
+    background-color: rgba(46, 204, 113, 0.9);
+    color: var(--color-text);
 }
 
 .form-status.error {
-  background-color: rgba(231, 76, 60, 0.9); 
-  color: var(--color-text);
-  border: 1px solid #e74c3c;
+    background-color: rgba(231, 76, 60, 0.9);
+    color: var(--color-text);
+    border: 1px solid #e74c3c;
 }
 
 
@@ -263,14 +271,14 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.footer-name{
+.footer-name {
     font-family: "Montserrat";
 }
 
-.footer__links  {
+.footer__links {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,35 +290,111 @@ h3 {
     color: var(--color-accent-hover);
     margin-top: 1.5rem;
     transition: color 0.3s ease;
+
     &:hover {
         color: var(--color-accent);
     }
 }
 
 /*-------------------media queries ------------------*/
-
-@media (max-width: 1000px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-}
-
 @media (max-width: 1200px) {
+
     .container {
-        grid-template-columns: 0.7fr 3fr 3fr 0.7fr;
+        grid-template-columns: 0.2fr 3fr 4fr 0.2fr;
+        margin-top: 3rem;
     }
 
     .sidebar {
         grid-column: 2 / 3;
-        position: static;
-        min-width: 22rem;
     }
 
     .main {
         grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .sidebar__nav {
+        margin-top: 5rem;
+    }
+
+    .sidebar__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .main {
+        padding: rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .project-title {
+        text-align: left;
+    }
+
+    .main-contact {
+        width: 30rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        padding: 0.5rem;
+    }
+
+    .sidebar__nav {
+        padding: 0;
+        margin-top: 3rem;
+    }
+
+    .main-contact {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-photo {
+        display: none;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .project-card img {
+        order: 2;
     }
 }

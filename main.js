@@ -42,4 +42,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+  // ----------------SCROLL EN MAIN---------------------------//
+
+  
+  const sections = document.querySelectorAll(".main-section")
+  const links = document.getElementsByClassName("sidebar__link")
+  
+
+  callback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        for(let i = 0; i < links.length; i++ ) {
+          if (links[i].getAttribute("href") === "#" + entry.target.id) {
+            links[i].classList.add("active")
+          } else {
+            links[i].classList.remove("active")
+          }
+        }
+      }
+    });
+  }
+
+const options = {
+  root: null,           
+  threshold: 0.7       
+};
+
+const observer = new IntersectionObserver(callback, options)
+sections.forEach(section => {
+  observer.observe(section)
+})
+
 });

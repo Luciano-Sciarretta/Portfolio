@@ -1,34 +1,40 @@
-
 :root {
-    --color-bg: #141528;
-    --color-bg-secondary: #16172c;
-    --color-text: #e0e0e0;
-    --color-text-secondary: #a0a0b0;
-    --color-accent: #a4d4ef;
-    --color-accent-hover: #76d6ff;
-    --color-border: #3a3a50;
-    --color-card-hover: rgba(79, 193, 255, 0.1);
+  --color-bg: #141528;
+  --color-bg-secondary: #16172c;
+  --color-text: #e0e0e0;
+  --color-text-secondary: #a0a0b0;
+  --color-accent: #a4d3ef98;
+  --color-accent-hover: #76d6ff;
+  --color-border: #3a3a50;
+  --color-card-hover: rgba(79, 193, 255, 0.1);
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
-#about, #projects, #contact-me {
-  scroll-margin-top: 5rem; 
+#about,
+#projects,
+#contact-me {
+  scroll-margin-top: 5rem;
 }
 
 
-.project-card__tech-item{
-    background-color: rgba(79, 193, 255, 0.15);
-    font-family: "Roboto", serif;
-    color: var(--color-accent-hover);
-    border-radius: 25px;
-    padding: 0.5rem;
-    font-size: 0.8rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.project-card__tech-item {
+  background-color: rgba(79, 193, 255, 0.15);
+  font-family: "Roboto", serif;
+  color: var(--color-accent-hover);
+  border-radius: 25px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 strong {
-    color: var(--color-text);
+  color: var(--color-text);
 }
+
+
+
+
