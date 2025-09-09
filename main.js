@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contact-form")
   const status = document.getElementById("form-status")
-  
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
 
@@ -44,15 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ----------------SCROLL EN MAIN---------------------------//
 
-  
+
   const sections = document.querySelectorAll(".main-section")
   const links = document.getElementsByClassName("sidebar__link")
-  
+
 
   callback = (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        for(let i = 0; i < links.length; i++ ) {
+        for (let i = 0; i < links.length; i++) {
           if (links[i].getAttribute("href") === "#" + entry.target.id) {
             links[i].classList.add("active")
           } else {
@@ -63,14 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-const options = {
-  root: null,           
-  threshold: 0.7       
-};
-
-const observer = new IntersectionObserver(callback, options)
-sections.forEach(section => {
-  observer.observe(section)
-})
-
+  const options = {
+    root: null,
+    threshold: 0.7
+  };
+  if (window.matchMedia("(min-width: 1001px)").matches) {
+    const observer = new IntersectionObserver(callback, options)
+    sections.forEach(section => {
+      observer.observe(section)
+    })
+  }
 });
