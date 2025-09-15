@@ -146,6 +146,7 @@ h3 {
 
 .project-link{
     text-decoration: none;
+    color: var(--color-text);
 }
 
 .projects-title,
