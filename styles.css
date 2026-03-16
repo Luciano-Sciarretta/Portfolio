@@ -116,6 +116,7 @@ h3 {
     width: 270px;
     height: 270px;
     object-fit: cover;
+    object-position: top;
     flex-shrink: 0;
 }
 
