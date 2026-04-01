@@ -15,14 +15,12 @@ body {
 
 }
 
-
 /*-----------------------------   CONTAINER   ---------------------------*/
 .container {
     display: grid;
     grid-template-columns: 0.8fr 2fr 1fr 3fr 0.8fr;
     margin-top: 6rem;
 }
-
 
 /*---------------------   SIDEBAR   ---------------------------------------*/
 .sidebar {
@@ -61,7 +59,6 @@ h3 {
     margin-bottom: 1.4rem;
 }
 
-
 .sidebar__nav {
     margin-top: 7rem;
 }
@@ -69,8 +66,6 @@ h3 {
 .sidebar__nav ul {
     list-style: none;
 }
-
-
 
 .sidebar__item {
     margin-bottom: 1.4rem;
@@ -103,7 +98,6 @@ h3 {
 
 /*-----------------------------------ABOUT------------------------*/
 
-
 .about-content {
     display: flex;
     gap: 1rem;
@@ -120,13 +114,14 @@ h3 {
     flex-shrink: 0;
 }
 
-.about-text  {
+.about-text {
     flex: 1;
     min-width: 200px;
 }
+
 .about-text p {
     margin-bottom: 1.5rem;
-    line-height:1.6;
+    line-height: 1.6;
 }
 
 .about-text a {
@@ -141,20 +136,32 @@ h3 {
     height: auto;
 }
 
-
 .main-projects {
     margin-top: 7rem;
     font-family: "Montserrat", serif;
 }
 
-.project-link{
+.project-link {
+    color: var(--color-accent-hover);
     text-decoration: none;
-    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+        color: var(--color-text);
+        border-bottom: 1px solid var(--color-accent-hover);
+        
+    }
 }
 
 .projects-title,
 .contact-title,
 .about-title {
+
     margin-bottom: 3rem;
     letter-spacing: 3px;
 }
@@ -190,10 +197,32 @@ h3 {
 }
 
 
+.project-card__visual {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.project-card__actions {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .project-title,
 .project-desc,
 .project-tech {
     grid-column: 2;
+
+}
+
+.project-tech {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
 }
 
 
