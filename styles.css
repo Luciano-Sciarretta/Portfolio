@@ -171,8 +171,9 @@ h3 {
     padding: 1rem;
     border-radius: 7px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     gap: 1rem;
+    align-items: stretch;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
     .project-title {
@@ -190,10 +191,11 @@ h3 {
 }
 
 .project-card__img {
-    width: 135px;
-    height: 83px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -226,7 +228,15 @@ h3 {
 }
 
 
-
+.project-highlights {
+    margin-top: 0.7rem;
+    color: var(--color-text-secondary);
+    list-style: none;
+}
+.project-highlights li {
+    font-size: 0.8rem;
+    line-height: 1.5
+}
 
 /*---------------------   CONTACT FORM   -----------------------*/
 .main-contact form {
