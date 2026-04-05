@@ -49,4 +49,4 @@ Este proyecto requiere una instancia activa de PostgreSQL.
     python manage.py migrate
     python manage.py runserver
 
-Desarrollado por Luciano Sciarretta Junior Backend Developer | Mar del Plata, Argentina
+Desarrollado por Luciano Sciarretta Junior Backend Developer | Mar del Plata, Argentina     
